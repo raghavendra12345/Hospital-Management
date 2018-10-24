@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="UI.css">
+<head>
+	<title>Home</title>
+	<head><link href="navigation.css" rel="stylesheet"/></head>
+</head>
+		<body>
+		<div>
+			<div class="topnav">
+				<a style = "float:left;" href="home.html">HOSPITAL EPR</a>
+				<a href="contact.html">CONTACT</a>
+				<a class = "active" href="home.html">HOME</a>
+			</div>
+		<div class = "logo">
+			<a ><h1 style="color:red;"><b>WELCOME TO EPR HOSPITAL</b></h1></a>
+			<hr>
+		<div class="w3-content w3-display-container" style="max-width:800px">
+  			<img class="slides w3-animate-fading" src="logo.jpg" style="max-width:100%;height: 400px;">
+		 	<img class="slides w3-animate-fading" src="doctor8.jpg" style="max-width:100%; height:400px;">
+			<img class="slides w3-animate-fading" src="doctor9.jpeg" style="max-width:100%; height:400px;">
+			<img class="slides w3-animate-fading" src="doctor11.jpg" style="max-width:100%; height:400px;">
+			<img class="slides w3-animate-fading" src="doctor10.jpeg" style="max-width:100%; height:400px;">	
+			<img class="slides w3-animate-fading" src="doctor.jpg" style="max-width:100%; height:400px;">
+			<img class="slides w3-animate-fading" src="doctor4.jpg" style="max-width:100%; height:400px;">
+			<img class="slides w3-animate-fading" src="doctor12.jpeg" style="max-width:100%;height: 400px;">
+			<img class="slides w3-animate-fading" src="doctor6.jpg" style="max-width:100%; height:400px;">
+			<img class="slides w3-animate-fading" src="doctor7.jpeg" style="max-width:100%; height:400px;">
+		</div>
+		 	<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() 
+			{
+			var i;
+			var x = document.getElementsByClassName("slides");
+			for (i = 0; i < x.length; i++) {
+			   x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 4000); // Change image every 2 seconds
+			}
+			</script>
+  			<hr>
+		</div>
+		</div>	
+		<div class="navbar">
+			<a href="adminlogin.php" class="active">ADMIN</a>
+		     <a href="login.html">LOGIN</a>
+         <!-- <a href="doctor2.php" class="active">DOCTOR</a>
+		     <a href="patient.html" >PATIENT</a> -->
+		     
+		</div>
+		</body>
+</html>
+    
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html> 
